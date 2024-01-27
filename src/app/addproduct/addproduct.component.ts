@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FirstService } from '../first.service';
 
 @Component({
   selector: 'app-addproduct',
@@ -7,6 +8,16 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./addproduct.component.css']
 })
 export class AddproductComponent {
+  
+constructor(
+  private s:FirstService
+){
+
+}
+ngOnInit(){
+  this.s.sayHello()
+}
+
 login=new FormControl('',Validators.required);
 pwd=new FormControl('',Validators.minLength(3));
 formLogin=new FormGroup(

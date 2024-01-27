@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FirstService } from '../first.service';
 
 @Component({
   selector: 'app-first',
@@ -6,6 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./first.component.css']
 })
 export class FirstComponent {
+  constructor(private s:FirstService){
+
+  }
+
+  ngOnInit(){
+    this.s.sayHello();
+  }
 klass='2cinfo3 sjfsjfsf';
 color="yellow"
 search="";

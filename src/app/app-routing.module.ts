@@ -6,9 +6,13 @@ import { RegisterComponent } from './register/register.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { DetailComponent } from './detail/detail.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
+import { FirstComponent } from './first/first.component';
+import { ProductsComponent } from './gestion produit/products/products.component';
 
 const r: Routes = [
   {path:"",redirectTo:'login',pathMatch:'full'},
+  {path:'first',component:FirstComponent},
+  {path:'p',component:ProductsComponent},
   {path:'home',component:HomeComponent},
   {path:'add',component:AddproductComponent},
   {path:'login',component:LoginComponent},

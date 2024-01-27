@@ -14,7 +14,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { DetailComponent } from './detail/detail.component';
 import { FromComponent } from './from/from.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
-
+import { ProductsComponent } from './gestion produit/products/products.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,13 +28,15 @@ import { AddproductComponent } from './addproduct/addproduct.component';
     NotfoundComponent,
     DetailComponent,
     FromComponent,
-    AddproductComponent
+    AddproductComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
