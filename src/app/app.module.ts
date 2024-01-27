@@ -16,6 +16,7 @@ import { FromComponent } from './from/from.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { ProductsComponent } from './gestion produit/products/products.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddpComponent } from './gestion produit/addp/addp.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     DetailComponent,
     FromComponent,
     AddproductComponent,
-    ProductsComponent
+    ProductsComponent,
+    AddpComponent
   ],
   imports: [
     BrowserModule,

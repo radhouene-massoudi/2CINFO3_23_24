@@ -11,4 +11,7 @@ export class ProductService {
   fetchProducts(){
     return this.http.get("http://localhost:3000/product")
   }
+  addProduct(data:any){
+    return this.http.post('http://localhost:3000/product', data);
+  }
 }
