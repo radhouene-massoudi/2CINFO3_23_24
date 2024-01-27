@@ -6,12 +6,21 @@ import { Injectable } from '@angular/core';
 })
 export class ProductService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  fetchProducts(){
+  fetchProducts() {
     return this.http.get("http://localhost:3000/product")
   }
-  addProduct(data:any){
+  addProduct(data: any) {
     return this.http.post('http://localhost:3000/product', data);
+  }
+  removeproduct(id: any) {
+    return this.http.delete("http://localhost:3000/product/" + id)
+  }
+  updateproduct(id:any,data:any){
+ return this.http.put("http://localhost:3000/product/" + id,data)
+  }
+  findById(id:any){
+return this.http.get("http://localhost:3000/product/" + id);
   }
 }

@@ -9,10 +9,14 @@ import { AddproductComponent } from './addproduct/addproduct.component';
 import { FirstComponent } from './first/first.component';
 import { ProductsComponent } from './gestion produit/products/products.component';
 import { AddpComponent } from './gestion produit/addp/addp.component';
+import { RemoveproductComponent } from './gestion produit/removeproduct/removeproduct.component';
+import { UpdateproductComponent } from './gestion produit/updateproduct/updateproduct.component';
 
 const r: Routes = [
   {path:"",redirectTo:'login',pathMatch:'full'},
+  {path:'remove/:idofproduct',component:RemoveproductComponent},
   {path:'first',component:FirstComponent},
+  {path:'updateproduct/:id',component:UpdateproductComponent},
   {path:'p',component:ProductsComponent},
   {path:'ajout',component:AddpComponent},
   {path:'home',component:HomeComponent},
